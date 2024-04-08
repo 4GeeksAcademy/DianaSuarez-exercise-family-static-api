@@ -50,7 +50,7 @@ class FamilyStructure:
     def _generateId(self):
         return randint(0, 99999999)
 
-    def add_member(self, member):
+    def post_add_member(self, member):
         # Agrega un nuevo miembro a la lista de _members
         pass
 

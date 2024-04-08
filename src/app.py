@@ -40,6 +40,10 @@ def get_members_id(id):
     return jsonify(members), 200
 
 #  Añadir (POST) un miembro
+@app.route('/member/', methods=['POST'])
+def post_members():
+    members = jackson_family.post_add_member()
+    return jsonify(members), 200
 
 
 
