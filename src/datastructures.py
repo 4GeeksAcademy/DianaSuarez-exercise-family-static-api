@@ -11,7 +11,7 @@ from random import randint
 class FamilyStructure:
     def __init__(self, last_name):
         self.last_name = last_name
-        self._next_id = 1 
+        self._next_id = 1
 
         # + id: Int
         # + first_name: String
@@ -52,11 +52,14 @@ class FamilyStructure:
 
     def post_add_member(self, member):
         # Agrega un nuevo miembro a la lista de _members
-        pass
+        self._members.append(member)
 
     def delete_member(self, id):
         # fill this method and update the return
-        pass
+        for member in self._members:
+            print(member)
+            if member["id"] == id:
+                self._members.remove(member)
 
     def get_member(self, id):
         # fill this method and update the return
