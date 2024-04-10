@@ -1,4 +1,3 @@
-
 """
 update this file to implement the following already declared methods:
 - add_member: Should add a member to the self._members list
@@ -52,6 +51,7 @@ class FamilyStructure:
 
     def post_add_member(self, member):
         # Agrega un nuevo miembro a la lista de _members
+        member["id"] = self._generateId()
         self._members.append(member)
 
     def delete_member(self, id):
@@ -70,3 +70,4 @@ class FamilyStructure:
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
         return self._members
+    
